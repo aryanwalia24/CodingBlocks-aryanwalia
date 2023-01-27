@@ -1,0 +1,20 @@
+#include <stdio.h>
+
+int main()
+{
+    int n;
+    int dig, a = 0, r,count=0;
+    scanf("%d %d",&n,&dig);
+    while (n > 0)
+    {
+        r = n % 10;
+        a++;
+        if (dig==r)
+        {
+            count++;
+        }   
+        n = n / 10;
+    }
+    printf("%d", count);    
+    return 0;
+}
