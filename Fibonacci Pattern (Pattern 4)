@@ -1,0 +1,27 @@
+#include<stdio.h>
+int main(void) {
+	int fib(int n)
+	{
+		if (n<=1)
+		{
+			return n;
+		}		
+		else
+		{
+			return fib(n-1) + fib(n-2);
+		}
+	}
+	int lines,n=0;
+	scanf("%d",&lines);
+	for(int i=1;i<=lines;i++)
+	{
+		for(int j=1;j<=i;j++,n++)
+		{
+			printf("%d\t",fib(n));
+		}
+		printf("\n");
+	}
+
+
+	return 0;
+}
