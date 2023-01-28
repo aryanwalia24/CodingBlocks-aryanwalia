@@ -1,0 +1,45 @@
+#include <stdio.h>
+#include <stdbool.h>
+int main()
+{
+    char s1[] = "Aayush";
+    char s2[] = "Harshit";
+    int n;
+    scanf("%d", &n);
+    int j = 1;
+    while (j <= n)
+    {
+        int a, h;
+        scanf("%d %d", &a, &h);
+        int asum = 0;
+        int hsum = 0;
+
+        int i = 1;
+        while (true)
+        {
+            if (i % 2 == 1)
+            {
+                asum = asum + i;
+                if (asum > a)
+                {
+                    puts(s2);
+                    break;
+                }
+            }
+            
+            else
+            {
+                hsum = hsum + i;
+                if (hsum > h)
+                {
+                    puts(s1);
+                    break;
+                }
+            }
+            i++;
+        }
+
+        j++;
+    }
+	return 0;
+}
