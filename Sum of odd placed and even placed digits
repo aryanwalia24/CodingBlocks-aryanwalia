@@ -1,0 +1,25 @@
+#include <stdio.h>
+int sumodd(int num)
+{
+    int sum = 0, rem;
+    while (num)
+    {
+        rem = num % 10;
+        sum = sum + rem;
+        num = (num / 100);
+    }
+    return sum;
+}
+
+int sumeven(int num)
+{
+    return sumodd(num / 10);
+}
+int main()
+{
+    int num;
+    scanf("%d",&num);
+    printf("%d\n",sumodd(num));
+    printf("%d\n",sumeven(num));
+    return 0;
+}
