@@ -1,0 +1,16 @@
+#include <stdio.h>
+int main(void)
+{
+	int n, n1, count = 1;
+	scanf("%d %d",&n,&n1);
+	for (int i = 1; count <= n; i++)
+	{
+		int d = (3 * i) + 2;
+		if (d % n1 != 0)
+		{
+			printf("%d\n", d);
+			count++;
+		}
+	}
+	return 0;
+}
