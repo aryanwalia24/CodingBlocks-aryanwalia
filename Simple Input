@@ -1,0 +1,21 @@
+#include<stdio.h>
+int main(void) {
+	int n=1,sum=0;
+	while(n==1)
+	{
+		int n1;
+		scanf("%d",&n1);
+		sum = sum + n1;
+		if(sum<0)
+		{
+			break;
+		}
+		else
+		{
+			printf("%d\n",n1);
+		}
+	}
+	
+	
+	return 0;
+}
