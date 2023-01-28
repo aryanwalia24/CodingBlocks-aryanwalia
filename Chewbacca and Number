@@ -1,0 +1,19 @@
+#include <string.h>
+#include <stdio.h>
+ 
+void change(char *x){
+    *x =  '0' + 9 - *x + '0';
+}
+int main()
+{
+    char num[32];
+    scanf("%s", num);
+    if(num[0]!='9' && num[0]>='5')
+        change(&num[0]);
+    int i;
+    for(i = 1; i < strlen(num); ++i)
+        if(num[i]>='5')
+            change(&num[i]);
+    puts(num);
+    return 0;
+}
