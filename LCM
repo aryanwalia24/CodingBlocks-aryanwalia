@@ -1,0 +1,25 @@
+#include <stdio.h>
+
+int main()
+{
+    int a, b, lcm = 0, temp;
+    scanf("%d %d", &a, &b);
+    int max = a, min = b;
+
+    if (a > b)
+    {
+        temp = a;
+        a = b;
+        b = temp;
+    }
+
+    int k = 1, LCM;
+    do
+    {
+        LCM = max * k;
+        k++;
+    } while (LCM % min != 0);
+    printf("%d", LCM);
+
+    return 0;
+}
